@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Original_data</title>
+</head>
+<body>
+<h1>Result presentation</h1>
+
+<h2> Original Data:</h2>
+{{data|safe}}
+
+<h2> Heatmap:</h2>
+<img src="{{ url_for('static', filename='img/heatmap.png') }}">
+<h2> result:</h2>
+<img src="{{ url_for('static', filename='img/res.png') }}">
+
+<h1>Stroke Prediction</h1>
+
+<h2> Input here:</h2>
+
+<form action="/requests/" method="POST">
+    gender：<input type="text" name="gender">
+    <t> Male:0,Female:1</t><br />
+    age：<input type="float" name="age"><br />
+    hypertension：<input type="int" name="hypertension">
+    <t> yes:1 , no:0</t><br />
+    heart_disease：<input type="int" name="heart_disease">
+    <t> yes:1 , no:0</t><br />
+    ever_married：<input type="int" name="ever_married">
+    <t> yes:0 , no:1</t><br />
+    work_type：<input type="text" name="work_type">
+    <t> children:0 , private:1,Never worked:2 self_empolyed:3 government job:4</t><br />
+    Residence_type：<input type="text" name="Residence_type">
+    <t> urban:0 , rural:1</t><br />
+    avg_glucose_level：<input type="float" name="avg_glucose_level"><br />
+    height:<input type="float" name="height"><br />
+    weight<input type="float" name="weight"><br />
+    smoking_status<input type="float" name="smoking_status">
+    <t> never smoking:0 , formerly_smoked:1, smokes:2</t><br />
+  <input type="submit" value="submit"></form>
+</body>
+</html>
